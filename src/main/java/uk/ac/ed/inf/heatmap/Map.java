@@ -49,7 +49,7 @@ public class Map {
 				var squareGeo = (Geometry) squarePoly;
 				var squareFt = Feature.fromGeometry(squareGeo);
 				squareFt.addStringProperty("fill", colours[j][i]);
-				squareFt.addNumberProperty("opacity", 0.75);
+				squareFt.addNumberProperty("fill-opacity", 0.75);
 				features[counter] = squareFt;
 				counter++;
 			}
