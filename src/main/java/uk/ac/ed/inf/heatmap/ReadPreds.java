@@ -9,22 +9,22 @@ import java.util.regex.Pattern;
 // Read the contents of args[0], the predictions.txt, then map the values to an
 // int array 
 public class ReadPreds {
-	public int[][] preds2dArr;
+	public int[][] preds;
 
 	// Define constructor
 	public ReadPreds() {
-		this.preds2dArr = new int[10][10];
+		this.preds = new int[10][10];
 	}
 
 	// Getters
 	public int[][] getPreds2dArr() {
-		return this.preds2dArr;
+		return this.preds;
 	}
 
 	// Methods
 	// Read in the predictions
 	public void read(String filepath) {
-		var preds = "";
+		var predsStr = "";
 		var predsArr = new int[100];
 		var predsLoc = new File(filepath);
 
@@ -35,26 +35,26 @@ public class ReadPreds {
 			var penultimate = "";
 			while (s.hasNextLine()) {
 				penultimate = ultimate;
-				preds += penultimate + ", ";
+				predsStr += penultimate + ", ";
 				ultimate = s.nextLine();
 			}
 			s.close();
-			preds += ultimate;
+			predsStr += ultimate;
 
 			// Print a success message
-			System.out.println("-------------------------------\n"
+			System.out.println("------------------------------------------\n"
 					+ "Predictions complete!");
 		} catch (IOException e) {
 			e.printStackTrace();
 
 			// Print a failure message
-			System.out.println("\"-------------------------------\\n"
+			System.out.println("------------------------------------------\n"
 					+ ">> FAILURE: Precitions were not read!");
 		}
 
 		// Use regex to filter just the int values, then map to an int array
 		var p = Pattern.compile("[0-9]+");
-		var m = p.matcher(preds);
+		var m = p.matcher(predsStr);
 		predsArr = m.results().map(MatchResult::group)
 				.mapToInt(Integer::parseInt).toArray();
 
@@ -62,7 +62,7 @@ public class ReadPreds {
 		var counter = 0;
 		for (var i = 0; i < 10; i++) {
 			for (var j = 0; j < 10; j++) {
-				this.preds2dArr[i][j] = predsArr[counter];
+				this.preds[i][j] = predsArr[counter];
 				counter++;
 			}
 		}

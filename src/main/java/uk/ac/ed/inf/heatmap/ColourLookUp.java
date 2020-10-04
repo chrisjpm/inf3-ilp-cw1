@@ -14,8 +14,9 @@ public class ColourLookUp {
 		return this.colours;
 	}
 
-	// Setters
-	public void setColours(int[][] preds) {
+	// Methods
+	// Assign the hex value colour of the int in the predictions file
+	public void assignColours(int[][] preds) {
 		for (var i = 0; i < 10; i++) {
 			for (var j = 0; j < 10; j++) {
 				if (preds[i][j] >= 0 && preds[i][j] < 32) {
