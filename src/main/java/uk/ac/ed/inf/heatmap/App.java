@@ -1,6 +1,7 @@
 package uk.ac.ed.inf.heatmap;
 
-import com.mapbox.geojson.*;
+import java.io.FileWriter;
+import java.io.IOException;
 
 /**
  * 
@@ -8,35 +9,35 @@ import com.mapbox.geojson.*;
  *
  */
 public class App {
-	public static void main(String[] args) {	
-		// GEOJSON
-		var map = new Map();
-		map.createMap();
-
+	public static void main(String[] args) {
 		// PREDICTIONS
 		// Read in predictions to an int array, size 10x10
 		var predPath = args[0];
-		var r = new ReadPreds();	
+		var r = new ReadPreds();
 		r.read(predPath);
 		var preds = r.getPreds2dArr();
 
 		// Look up colours of predictions
 		var c = new ColourLookUp();
-		c.lookUp(preds);
+		c.setColours(preds);
 		var colours = c.getColours();
-	
-		// CREATE HEATMAP
-		// Print a program completion message
-		System.out.println("Finished!\n-------------------------------");
 
-		System.out.println("Some tests:");
-		System.out.println();
-		System.out.println(preds[9].length);
-		System.out.println(preds[0][0] + " " + preds[9][9] + " " + preds[5][1]);
-		System.out.println(
-				colours[0][0] + " " + colours[9][9] + " " + colours[5][1]);
-		System.out.println(colours[9].length);
+		// CREATE HEATMAP
+		var map = new Map();
+		map.createMap(colours);
+		var heatmap = map.getHeatmap().toJson();
 		
+		try {
+			FileWriter myWriter = new FileWriter("heatmap.geojson");
+			myWriter.write(heatmap);
+			myWriter.close();
+			System.out.println("Heatmap GeoJson successfully created!");
+		} catch (IOException e) {
+			System.out.println(">> FAILURE: Heatmap GeoJson wasn't created!");
+			e.printStackTrace();
+		}
+
+		System.out.println(heatmap);
 
 	}
 }
