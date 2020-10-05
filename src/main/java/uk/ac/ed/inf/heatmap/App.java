@@ -13,7 +13,7 @@ public class App {
 	// Write to file
 	static void writeToFile(String heatmap) {
 		try {
-			FileWriter myWriter = new FileWriter("heatmap.geojson");
+			FileWriter myWriter = new FileWriter("../heatmap.geojson");
 			myWriter.write(heatmap);
 			myWriter.close();
 			System.out.println("Heatmap GeoJson successfully created!"
