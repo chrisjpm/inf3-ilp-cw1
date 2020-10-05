@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="GB"/>
     <property name="sun.boot.library.path" value="C:\Users\Chris\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_14.0.2.v20200815-0932\jre\bin"/>
-    <property name="sun.java.command" value="C:\Users\Chris\AppData\Local\Temp\surefire10582234772115483517\surefirebooter7227867865330023578.jar C:\Users\Chris\AppData\Local\Temp\surefire10582234772115483517 2020-10-05T12-08-53_568-jvmRun1 surefire2162492434882255341tmp surefire_014114917751086407382tmp"/>
+    <property name="sun.java.command" value="C:\Users\Chris\AppData\Local\Temp\surefire2753257989666880508\surefirebooter15600494514800874608.jar C:\Users\Chris\AppData\Local\Temp\surefire2753257989666880508 2020-10-05T14-48-36_552-jvmRun1 surefire15938365703450910241tmp surefire_017541366161779992530tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\Chris\eclipse-workspace\heatmap\target\test-classes;C:\Users\Chris\eclipse-workspace\heatmap\target\classes;C:\Users\Chris\.m2\repository\com\mapbox\mapboxsdk\mapbox-sdk-geojson\5.5.0\mapbox-sdk-geojson-5.5.0.jar;C:\Users\Chris\.m2\repository\com\google\code\gson\gson\2.8.6\gson-2.8.6.jar;C:\Users\Chris\.m2\repository\junit\junit\4.11\junit-4.11.jar;C:\Users\Chris\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\Chris\AppData\Local\Temp\surefire10582234772115483517\surefirebooter7227867865330023578.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\Chris\AppData\Local\Temp\surefire2753257989666880508\surefirebooter15600494514800874608.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="14.0.2+12-46"/>
@@ -55,5 +55,5 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="58.0"/>
   </properties>
-  <testcase name="shouldAnswerWithTrue" classname="uk.ac.ed.inf.heatmap.AppTest" time="0.006"/>
+  <testcase name="shouldAnswerWithTrue" classname="uk.ac.ed.inf.heatmap.AppTest" time="0.005"/>
 </testsuite>

@@ -1,7 +1,6 @@
 package uk.ac.ed.inf.heatmap;
 
 public class ColourLookUp {
-
 	public String[][] colours;
 
 	// Define constructor

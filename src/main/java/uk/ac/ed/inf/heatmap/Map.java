@@ -24,11 +24,11 @@ public class Map {
 		// Find the divisions of the longitude and latitude
 		var diffLng = (-3.184319 - (-3.192473)) / 10;
 		var diffLat = (55.942617 - 55.946233) / 10;
- 
+
 		// Most north west cell
 		pointsLng[0] = -3.192473;
 		pointsLat[0] = 55.946233;
-		
+
 		for (var i = 1; i < 11; i++) {
 			pointsLng[i] = pointsLng[i - 1] + diffLng;
 			pointsLat[i] = pointsLat[i - 1] + diffLat;
@@ -51,7 +51,7 @@ public class Map {
 				var squarePoly = Polygon.fromLngLats(List.of(squarePts));
 				var squareGeo = (Geometry) squarePoly;
 				var squareFt = Feature.fromGeometry(squareGeo);
-				
+
 				// Colour code the cell
 				// Indexed i,j so to go left to right, top to bottom
 				squareFt.addStringProperty("fill", colours[i][j]);
