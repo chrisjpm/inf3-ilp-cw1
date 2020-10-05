@@ -22,9 +22,10 @@ public class Map {
 		var pointsLat = new double[11];
 
 		// Find the divisions of the longitude and latitude
-		var diffLng = (-3.192473 - (-3.184319)) / 10;
-		var diffLat = (55.946233 - 55.942617) / 10;
+		var diffLng = (-3.184319 - (-3.192473)) / 10;
+		var diffLat = (55.942617 - 55.946233) / 10;
  
+		// Most north west cell
 		pointsLng[0] = -3.192473;
 		pointsLat[0] = 55.946233;
 		
@@ -38,16 +39,21 @@ public class Map {
 		var counter = 0;
 		for (var i = 0; i < 10; i++) {
 			for (var j = 0; j < 10; j++) {
+				// Create polygon of cell
+				// Indexed j,i so to go west to east, north to south
 				var squarePts = new ArrayList<>(Arrays.asList(
-						Point.fromLngLat(pointsLng[i], pointsLat[j]),
-						Point.fromLngLat(pointsLng[i], pointsLat[j + 1]),
-						Point.fromLngLat(pointsLng[i + 1], pointsLat[j + 1]),
-						Point.fromLngLat(pointsLng[i + 1], pointsLat[j]),
-						Point.fromLngLat(pointsLng[i], pointsLat[j])));
+						Point.fromLngLat(pointsLng[j], pointsLat[i]),
+						Point.fromLngLat(pointsLng[j + 1], pointsLat[i]),
+						Point.fromLngLat(pointsLng[j + 1], pointsLat[i + 1]),
+						Point.fromLngLat(pointsLng[j], pointsLat[i + 1]),
+						Point.fromLngLat(pointsLng[j], pointsLat[i])));
 
 				var squarePoly = Polygon.fromLngLats(List.of(squarePts));
 				var squareGeo = (Geometry) squarePoly;
 				var squareFt = Feature.fromGeometry(squareGeo);
+				
+				// Colour code the cell
+				// Indexed i,j so to go left to right, top to bottom
 				squareFt.addStringProperty("fill", colours[i][j]);
 				squareFt.addNumberProperty("fill-opacity", 0.75);
 				features[counter] = squareFt;
