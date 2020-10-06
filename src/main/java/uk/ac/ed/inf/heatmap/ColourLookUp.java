@@ -1,11 +1,11 @@
 package uk.ac.ed.inf.heatmap;
 
 public class ColourLookUp {
-	public String[][] colours;
+	private String[][] colours;
 
 	// Define constructor
 	public ColourLookUp() {
-		this.colours = new String[10][10];
+		this.colours = new String[App.DIM_GRID][App.DIM_GRID];
 	}
 
 	// Getters
@@ -16,8 +16,8 @@ public class ColourLookUp {
 	// Methods
 	// Assign the hex value colour of the int in the predictions file
 	public void assignColours(int[][] preds) {
-		for (var i = 0; i < 10; i++) {
-			for (var j = 0; j < 10; j++) {
+		for (var i = 0; i < App.DIM_GRID; i++) {
+			for (var j = 0; j < App.DIM_GRID; j++) {
 				if (preds[i][j] >= 0 && preds[i][j] < 32) {
 					this.colours[i][j] = "#00ff00";
 				} else if (preds[i][j] >= 32 && preds[i][j] < 64) {
