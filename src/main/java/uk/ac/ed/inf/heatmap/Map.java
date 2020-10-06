@@ -71,6 +71,7 @@ public class Map {
 
 				// Colour code the cell
 				// Indexed i,j so to go left to right, top to bottom
+				squareFt.addStringProperty("rgb-string", colours[i][j]);
 				squareFt.addStringProperty("fill", colours[i][j]);
 				squareFt.addNumberProperty("fill-opacity", 0.75);
 				features[counter] = squareFt;

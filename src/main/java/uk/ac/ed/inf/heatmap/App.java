@@ -44,6 +44,7 @@ public class App {
 
 		// CREATE HEATMAP
 		var map = new Map();
+		// Set longitudes and latitudes of the boundaries
 		map.setPointLat1(55.946233);
 		map.setPointLat2(55.942617);
 		map.setPointLng1(-3.192473);
