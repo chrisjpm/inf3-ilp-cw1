@@ -37,7 +37,7 @@ not visited |#aaaaaa |Gray |no symbol
 0, 0, 50, 50, 75, 200, 200, 255, 255, 255
 ```
 
-*Expect heatmap:*
+*Expected heatmap:*
 
 ![Heatmap](https://i.imgur.com/WOoc8XW.png)
 
