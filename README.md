@@ -42,7 +42,7 @@ not visited |#aaaaaa |Gray |no symbol
 ![Heatmap](https://i.imgur.com/WOoc8XW.png)
 
 ## How To Run
-In the root folder, run `java -jar target/heatmap-0.0.1-SNAPSHOT.jar predictions.txt` then locate the `heatmap.geojson` that was created in the target folder. Upload this file to [GeoJSON](https://geojson.io/) to see the resulting heatmap.
+In the root folder, run `java -jar target/heatmap-0.0.1-SNAPSHOT.jar predictions.txt` then locate the `heatmap.geojson` that was created (view right now in the target folder through GitHub). Upload this file to [GeoJSON](https://geojson.io/) to see the resulting heatmap.
 
 ---
 
