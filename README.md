@@ -48,5 +48,3 @@ In the root folder, run `java -jar target/heatmap-0.0.1-SNAPSHOT.jar predictions
 
 ### Final Grade
 92% :tada:
-
-*Comments: Need more global variables.*
