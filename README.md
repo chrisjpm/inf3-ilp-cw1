@@ -49,4 +49,4 @@ In the root folder, run `java -jar target/heatmap-0.0.1-SNAPSHOT.jar predictions
 ### Final Grade
 92% :tada:
 
-[Feedback](https://github.com/cpuved/inf3-ilp-cw1/blob/master/feedback.txt)
+[Feedback](https://github.com/cpuved/inf3-ilp-cw1/blob/master/feedback.txt) | [Auto Report](https://github.com/cpuved/inf3-ilp-cw1/blob/master/auto-report.txt) | [Auto Report (GeoJSON)](https://github.com/cpuved/inf3-ilp-cw1/blob/master/auto-report.geojson)
